@@ -15,11 +15,6 @@ import java.util.List;
  */
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
-    private List<ContentItem> values;
-
-    private RecyclerView vRecyclerView;
-    private RecyclerView.Adapter vAdapter;
-    private RecyclerView.LayoutManager vLayoutManager;
 
     // Provide a reference to the views for each data item
     // Complex data items may need more than one view per item, and
@@ -29,15 +24,28 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
         public TextView txtName;
         public TextView txtHeader;
         public TextView txtFooter;
-        public View layout;
+
+        private RecyclerView variantRecyclerView;
+
+        public View view;
 
         public ViewHolder(View v) {
             super(v);
-            layout = v;
+            this.view = v;
             txtName = (TextView) v.findViewById(R.id.text_name);
             txtHeader = (TextView) v.findViewById(R.id.first_line);
             txtFooter = (TextView) v.findViewById(R.id.second_line);
+            variantRecyclerView = (RecyclerView) v.findViewById(R.id.variant_recycler_view);
         }
+    }
+
+    private List<ContentItem> values;
+    private RecyclerView.Adapter variantAdapter;
+    private RecyclerView.LayoutManager variantLayoutManager;
+
+    // Provide a suitable constructor (depends on the kind of dataset)
+    public MyAdapter(List<ContentItem> myDataset) {
+        values = myDataset;
     }
 
     public void add(int position, ContentItem item) {
@@ -50,12 +58,7 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
         notifyItemRemoved(position);
     }
 
-    // Provide a suitable constructor (depends on the kind of dataset)
-    public MyAdapter(List<ContentItem> myDataset) {
-        values = myDataset;
-    }
-
-    // Create new views (invoked by the layout manager)
+    // Create new views (invoked by the view manager)
     @Override
     public MyAdapter.ViewHolder onCreateViewHolder(ViewGroup parent,
                                                    int viewType) {
@@ -64,18 +67,13 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
                 parent.getContext());
         View v =
                 inflater.inflate(R.layout.row_layout, parent, false);
-        // set the view's size, margins, paddings and layout parameters
+        // set the view's size, margins, paddings and view parameters
         ViewHolder vh = new ViewHolder(v);
-
-        vRecyclerView = (RecyclerView) v.findViewById(R.id.variant_recycler_view);
-        vRecyclerView.setHasFixedSize(true);
-        vLayoutManager = new LinearLayoutManager(vRecyclerView.getContext());
-        vRecyclerView.setLayoutManager(vLayoutManager);
 
         return vh;
     }
 
-    // Replace the contents of a view (invoked by the layout manager)
+    // Replace the contents of a view (invoked by the view manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
         final ContentItem content = values.get(position);
@@ -83,15 +81,20 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
         holder.txtHeader.setText(content.getDescription());
         holder.txtFooter.setText("Footer text is here!");
 
-        holder.setIsRecyclable(false);
+//        holder.setIsRecyclable(false);
 
-        vAdapter = new VariantAdapter(content.getVariants());
-        vRecyclerView.setAdapter(vAdapter);
+        variantLayoutManager = new LinearLayoutManager(holder.view.getContext());
+        holder.variantRecyclerView.setLayoutManager(variantLayoutManager);
+        variantAdapter = new VariantAdapter(content.getVariants());
+        holder.variantRecyclerView.setAdapter(variantAdapter);
     }
 
-    // Return the size of your dataset (invoked by the layout manager)
+
+    // Return the size of your dataset (invoked by the view manager)
     @Override
     public int getItemCount() {
         return values.size();
     }
+
 }
+

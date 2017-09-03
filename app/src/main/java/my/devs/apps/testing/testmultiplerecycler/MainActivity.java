@@ -27,11 +27,11 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.my_recycler_view);
         // use this setting to
         // improve performance if you know that changes
-        // in content do not change the layout size
+        // in content do not change the view size
         // of the RecyclerView
         recyclerView.setHasFixedSize(true);
 
-        // use a linear layout manager
+        // use a linear view manager
         mLayoutManager = new LinearLayoutManager(this);
         recyclerView.setLayoutManager(mLayoutManager);
 
