@@ -22,7 +22,7 @@
             android:src="@mipmap/ic_launcher" />
 
         <TextView
-            android:id="@+id/secondLine"
+            android:id="@+id/second_line"
             android:layout_width="fill_parent"
             android:layout_height="26dip"
             android:layout_alignParentBottom="true"
@@ -34,10 +34,10 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/firstLine"
+            android:id="@+id/first_line"
             android:layout_width="fill_parent"
             android:layout_height="26dip"
-            android:layout_above="@id/secondLine"
+            android:layout_above="@id/second_line"
             android:layout_alignParentRight="true"
             android:layout_alignWithParentIfMissing="true"
             android:layout_toRightOf="@id/icon"
@@ -46,10 +46,10 @@
             android:textSize="16sp" />
 
         <TextView
-            android:id="@+id/textname"
+            android:id="@+id/text_name"
             android:layout_width="fill_parent"
             android:layout_height="26dip"
-            android:layout_above="@id/firstLine"
+            android:layout_above="@id/first_line"
             android:layout_alignParentRight="true"
             android:layout_alignParentTop="true"
             android:layout_alignWithParentIfMissing="true"

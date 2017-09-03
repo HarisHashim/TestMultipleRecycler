@@ -7,7 +7,7 @@
     android:padding="8dp">
 
     <TextView
-        android:id="@+id/textVariantName"
+        android:id="@+id/text_variant_name"
         android:layout_width="wrap_content"
         android:layout_height="26dip"
         android:layout_alignParentLeft="true"
@@ -17,14 +17,14 @@
         android:textSize="16sp" />
 
     <TextView
-        android:id="@+id/textVariantDescription"
+        android:id="@+id/text_variant_description"
         android:layout_width="wrap_content"
         android:layout_height="26dip"
         android:gravity="center_vertical"
         android:text="Example application"
         android:textSize="16sp"
         tools:text="Description"
-        android:layout_below="@+id/textVariantName"
+        android:layout_below="@+id/text_variant_name"
         android:layout_alignParentStart="true" />
 
     <TextView
@@ -40,7 +40,7 @@
         android:textColor="@color/colorPrimary"
         android:textSize="12sp"
         android:layout_alignParentTop="true"
-        android:layout_toEndOf="@+id/textVariantDescription"
+        android:layout_toEndOf="@+id/text_variant_description"
         android:layout_marginStart="13dp" />
 
     <TextView

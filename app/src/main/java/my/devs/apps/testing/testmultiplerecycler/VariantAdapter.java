@@ -42,8 +42,8 @@ public class VariantAdapter extends RecyclerView.Adapter<VariantAdapter.ViewHold
             this.mListener = listener;
 
             this.view = v;
-            textVariantName = (TextView) v.findViewById(R.id.textVariantName);
-            textVariantDescription = (TextView) v.findViewById(R.id.textVariantDescription);
+            textVariantName = (TextView) v.findViewById(R.id.text_variant_name);
+            textVariantDescription = (TextView) v.findViewById(R.id.text_variant_description);
 
             variantDelete = (TextView) v.findViewById(R.id.variant_delete);
             variantDelete.setOnClickListener(this);

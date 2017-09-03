@@ -1,10 +1,5 @@
 package my.devs.apps.testing.testmultiplerecycler;
 
-/**
- * Created by HarisHashim on 9/3/2017.
- * <myName>@gmail.com
- */
-
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
@@ -15,7 +10,8 @@ import android.widget.TextView;
 import java.util.List;
 
 /**
- * Created by harishashim on 9/2/2017.
+ * Created by HarisHashim on 9/3/2017.
+ * <myName>@gmail.com
  */
 
 public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
@@ -38,9 +34,9 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
         public ViewHolder(View v) {
             super(v);
             layout = v;
-            txtName = (TextView) v.findViewById(R.id.textname);
-            txtHeader = (TextView) v.findViewById(R.id.firstLine);
-            txtFooter = (TextView) v.findViewById(R.id.secondLine);
+            txtName = (TextView) v.findViewById(R.id.text_name);
+            txtHeader = (TextView) v.findViewById(R.id.first_line);
+            txtFooter = (TextView) v.findViewById(R.id.second_line);
         }
     }
 
