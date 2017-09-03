@@ -82,25 +82,12 @@ public class MyAdapter extends RecyclerView.Adapter<MyAdapter.ViewHolder>  {
     // Replace the contents of a view (invoked by the layout manager)
     @Override
     public void onBindViewHolder(ViewHolder holder, final int position) {
-        // - get element from your dataset at this position
-        // - replace the contents of the view with that element
         final ContentItem content = values.get(position);
         holder.txtName.setText(content.getName());
         holder.txtHeader.setText(content.getDescription());
-        holder.txtHeader.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                remove(position);
-            }
-        });
+        holder.txtFooter.setText("Footer text is here!");
 
-        String detail = "";
-        for (ContentVariant variant: content.getVariants()) {
-            detail += variant.getName() + " (" + variant.getDescription() + ") /n";
-        }
-        holder.txtFooter.setText(detail);
-
-        //holder.setIsRecyclable(false);
+        holder.setIsRecyclable(false);
 
         vAdapter = new VariantAdapter(content.getVariants());
         vRecyclerView.setAdapter(vAdapter);
