@@ -1,5 +1,10 @@
 package my.devs.apps.testing.testmultiplerecycler;
 
+/**
+ * Created by HarisHashim on 9/3/2017.
+ * <myName>@gmail.com
+ */
+
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;

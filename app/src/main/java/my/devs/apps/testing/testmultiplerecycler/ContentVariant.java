@@ -1,7 +1,8 @@
 package my.devs.apps.testing.testmultiplerecycler;
 
 /**
- * Created by harishashim on 9/2/2017.
+ * Created by HarisHashim on 9/3/2017.
+ * <myName>@gmail.com
  */
 
 public class ContentVariant {
