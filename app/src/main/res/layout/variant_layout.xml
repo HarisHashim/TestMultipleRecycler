@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="8dp">
+
+    <TextView
+        android:id="@+id/textVariantName"
+        android:layout_width="wrap_content"
+        android:layout_height="26dip"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical"
+        android:text="Name"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/textVariantDescription"
+        android:layout_width="wrap_content"
+        android:layout_height="26dip"
+        android:gravity="center_vertical"
+        android:text="Example application"
+        android:textSize="16sp"
+        tools:text="Description"
+        android:layout_below="@+id/textVariantName"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/variant_delete"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/delete"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/textVariantDescription"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/variant_plus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/plus_box"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/variant_delete"
+        android:layout_marginStart="13dp" />
+
+    <TextView
+        android:id="@+id/variant_minus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="?attr/selectableItemBackgroundBorderless"
+        android:drawablePadding="3dp"
+        android:drawableTop="@drawable/minus_box"
+        android:gravity="center"
+        android:padding="6dp"
+        android:text=""
+        android:textColor="@color/colorPrimary"
+        android:textSize="12sp"
+        android:layout_alignParentTop="true"
+        android:layout_toEndOf="@+id/variant_plus"
+        android:layout_marginStart="13dp" />
+
+</RelativeLayout>

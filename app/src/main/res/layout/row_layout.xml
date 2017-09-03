@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="6dip">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="92dip"
+        android:padding="6dip">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="6dip"
+            android:contentDescription="TODO"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/secondLine"
+            android:layout_width="fill_parent"
+            android:layout_height="26dip"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_toRightOf="@id/icon"
+            android:ellipsize="marquee"
+            android:maxLines="1"
+            android:text="Description"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/firstLine"
+            android:layout_width="fill_parent"
+            android:layout_height="26dip"
+            android:layout_above="@id/secondLine"
+            android:layout_alignParentRight="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toRightOf="@id/icon"
+            android:gravity="center_vertical"
+            android:text="Example application"
+            android:textSize="16sp" />
+
+        <TextView
+            android:id="@+id/textname"
+            android:layout_width="fill_parent"
+            android:layout_height="26dip"
+            android:layout_above="@id/firstLine"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_alignWithParentIfMissing="true"
+            android:layout_toRightOf="@id/icon"
+            android:gravity="center_vertical"
+            android:text="Example application"
+            android:textSize="16sp"
+            tools:text="Name" />
+    </RelativeLayout>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/variant_recycler_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@android:color/darker_gray"
+        android:scrollbars="vertical"
+        tools:layout_editor_absoluteX="8dp"
+        tools:layout_editor_absoluteY="8dp" />
+</LinearLayout>
