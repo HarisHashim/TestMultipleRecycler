@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "202210767347",
+    "firebase_url": "https://food-hub-df38e.firebaseio.com",
+    "project_id": "food-hub-df38e",
+    "storage_bucket": "food-hub-df38e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:202210767347:android:cb3d1b7465c9eb7b",
+        "android_client_info": {
+          "package_name": "my.devs.apps.testing.testmultiplerecycler"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "202210767347-ks31usv7t2vdtarf4jf2o0qfh4u12cd2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBHBoKZTemOUUCs9hkGObbNKBtTuBLWjD4"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
